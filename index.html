@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Course Home Page for Web and Computer Programming Certificate">
+    <meta name="author" content="Wiselinda Zidor">
+    <title>Course Home Page</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/profile.png" alt="Profile Picture" class="profile-pic">
+        <h1>Wiselinda Zidor</h1>
+        <a id="menu" href="#"></a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="#">GitHub Profile</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="course-work">
+            <h2>Course Work</h2>
+            <ul id="course-list"></ul>
+        </section>
+        <section id="location">
+            <h2><Port-Au-Prince></Port-Au-Prince> Haiti</h2>
+            <img src="images/haiti.png" alt="Citadelle">
+        </section>
+        <section id="certificate">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div class="filter-buttons">
+                <button id="all-btn">All</button>
+                <button id="cse-btn">CSE</button>
+                <button id="wdd-btn">WDD</button>
+            </div>
+            <div id="course-cards"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> ❤ Wiselinda Zidor ❤ Haiti, Port-au-Prince</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
