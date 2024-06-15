@@ -43,6 +43,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     menuButton.addEventListener('click', () => {
         navLinks.classList.toggle('show');
-        hambutton.classList.toggle('show')
     });
 });
