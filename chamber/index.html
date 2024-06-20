@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Commerce - Home</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/chamberlogo.png" class="logo" alt="Logo">
+        <button class="hamburger" id="menu">&#9776;</button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <img src="images/hero.jpg" alt="Community Hero Image" class="hero-image">
+            <div class="hero-text">
+                <h2>Welcome to Our Community</h2>
+                <p>Your gateway to local business and networking opportunities.</p>
+            </div>
+            <div class="weather-section">
+                <h3>Current Weather</h3>
+                <div id="current-weather" class="weather-info">
+                    <!-- Current weather information will be injected here -->
+                    <img id="weather-icon" alt="Weather Icon" src="">
+                    <div id="weather-details">
+                        <p id="weather-temp"></p>
+                        <p id="weather-condition"></p>
+                        <p id="weather-high-low"></p>
+                        <p id="weather-humidity"></p>
+                        <p id="weather-sunrise"></p>
+                        <p id="weather-sunset"></p>
+                    </div>
+                </div>
+                <h3>Weather Forecast</h3>
+                <div id="weather-forecast" class="weather-info">
+                    <!-- Weather forecast information will be injected here -->
+                    <p id="forecast-today"></p>
+                    <p id="forecast-wednesday"></p>
+                    <p id="forecast-thursday"></p>
+                </div>
+            </div>
+            <div class="events-section">
+                <h3>Upcoming Events</h3>
+                <ul id="events-list">
+                    <!-- Events will be injected here -->
+                </ul>
+            </div>
+        </section>
+        <section class="features">
+            <article>
+                <h3>Community Information</h3>
+                <p>Stay informed with the latest news and updates from our community.</p>
+            </article>
+            <article>
+                <h3>Weather</h3>
+                <p>Get the current weather and forecasts for the area.</p>
+            </article>
+            <article>
+                <h3>Business Spotlight</h3>
+                <p>Highlighting successful businesses and their contributions.</p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Chamber of Commerce. All rights reserved.</p>
+        <p>Developed by Your Name for WDD 231. Last modified: <span id="last-modified"></span></p>
+    </footer>
+    <script src="scripts/main.js" defer></script>
+</body>
+</html>

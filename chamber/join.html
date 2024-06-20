@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Commerce - Join Us</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/chamberlogo.png" class="logo" alt="Logo">
+        <div class="hamburger">&#9776;</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="membership-info">
+            <h2>Join the Chamber</h2>
+            <p>Discover the benefits of becoming a member and join our thriving community.</p>
+            <div class="membership-levels">
+                <article>
+                    <h3>Non-Profit</h3>
+                    <p>Basic membership for non-profit organizations.</p>
+                </article>
+                <article>
+                    <h3>Silver</h3>
+                    <p>Enhanced membership with additional perks.</p>
+                </article>
+                <article>
+                    <h3>Gold</h3>
+                    <p>Premium membership with full benefits.</p>
+                </article>
+            </div>
+        </section>
+        <section class="application-form">
+            <h3>Membership Application</h3>
+            <form action="#" method="post">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="level">Membership Level:</label>
+                <select id="level" name="level">
+                    <option value="non-profit">Non-Profit</option>
+                    <option value="silver">Silver</option>
+                    <option value="gold">Gold</option>
+                </select>
+                
+                <input type="submit" value="Join Now">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Chamber of Commerce. All rights reserved.</p>
+        <p>Developed by Your Name for WDD 231. Last modified: <span id="last-modified"></span></p>
+    </footer>
+    <script src="scripts/main.js" defer></script>
+</body>
+</html>

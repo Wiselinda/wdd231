@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Commerce - Directory</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/chamberlogo.png" class="logo" alt="Logo">
+        <div class="hamburger">&#9776;</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="directory-controls">
+            <h2>Business Directory</h2>
+            <button id="grid-view"><img src="images/grid-icon.png" alt="Grid View"></button>
+            <button id="list-view"><img src="images/list-icon.png" alt="list view"></button>
+        </section>
+        <section id="directory" class="directory-view grid"></section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Chamber of Commerce. All rights reserved.</p>
+        <p>Developed by Your Name for WDD 231. Last modified: <span id="last-modified"></span></p>
+    </footer>
+    <script src="scripts/main.js" defer></script>
+</body>
+</html>
