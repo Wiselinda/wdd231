@@ -3,15 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chamber Directory for Business">
+    <meta name="author" content="Wiselinda Zidor">
     <title>Chamber of Commerce - Directory</title>
+    <meta property="og:title" content="Chamber of Commerce-Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://wiselinda.github.io/wdd231/chamber/images/chamberlogo.png">
+    <meta property="og:url" content="https://wiselinda.github.io/wdd231/chamber/directory.html">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <img src="images/chamberlogo.png" class="logo" alt="Logo">
-        <div class="hamburger">&#9776;</div>
+        <button class="hamburger" id="menu">&#9776;</button>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -22,12 +31,13 @@
         </nav>
     </header>
     <main>
-        <section class="directory-controls">
+        <div class="menu">
             <h2>Business Directory</h2>
-            <button id="grid-view"><img src="images/grid-icon.png" alt="Grid View"></button>
-            <button id="list-view"><img src="images/list-icon.png" alt="list view"></button>
-        </section>
-        <section id="directory" class="directory-view grid"></section>
+            <button id="grid-view">⏹️Grid</button>
+            <button id="list-view">📄List</button>
+        </div>
+        <hr>
+        <section id="directory" class="grid"></section>
     </main>
     <footer>
         <p>&copy; <span id="year"></span> Chamber of Commerce. All rights reserved.</p>

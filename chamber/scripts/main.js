@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
     // Set the current year in the footer
     document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -11,101 +11,69 @@ document.addEventListener("DOMContentLoaded", () => {
     const directory = document.getElementById("directory");
 
     gridViewBtn.addEventListener("click", () => {
-        directory.classList.remove("list-view");
-        directory.classList.add("grid-view");
+        directory.classList.remove("list");
+        directory.classList.add("grid");
     });
 
     listViewBtn.addEventListener("click", () => {
-        directory.classList.remove("grid-view");
-        directory.classList.add("list-view");
+        directory.classList.remove("grid");
+        directory.classList.add("list");
     });
 
-    // Toggle navigation for mobile
+    // Function to fetch member data and display
+    async function fetchAndDisplayMembers() {
+        try {
+            const response = await fetch("data/members.json");
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const data = await response.json();
+            displayMembers(data.members); // Call displayMembers function with member data
+        } catch (error) {
+            console.error('Error fetching member data:', error);
+        }
+    }
+
+    // Function to display members based on current view mode (grid or list)
+    function displayMembers(members) {
+        const directoryContainer = document.getElementById("directory");
+        directoryContainer.innerHTML = ''; // Clear previous content
+        const viewMode = directory.classList.contains("grid") ? "grid" : "list";
+
+        members.forEach(member => {
+            const item = document.createElement("div");
+            item.className = "directory-item";
+
+            item.innerHTML = `
+                <img src="images/${member.image}" alt="${member.name}">
+                <h3>${member.name}</h3>
+                <p>${member.address}</p>
+                <p>${member.phone}</p>
+                <a href="${member.website}" target="_blank">${member.website}</a>
+            `;
+
+            directoryContainer.appendChild(item);
+        });
+    }
+
+    // Initial fetch and display members in grid view
+    await fetchAndDisplayMembers();
+
+    // Function to handle hamburger menu for mobile navigation
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('nav ul');
 
-    hamburger.addEventListener('click', function() {
+    hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         navMenu.classList.toggle('active');
     });
 
-    // Fetch and display member data
-    fetch("data/members.json")
-        .then(response => response.json())
-        .then(data => {
-            const directoryContainer = document.getElementById("directory");
-            data.members.forEach(member => {
-                const item = document.createElement("div");
-                item.className = "directory-item";
-
-                item.innerHTML = `
-                    <img src="images/${member.image}" alt="${member.name}">
-                    <h3>${member.name}</h3>
-                    <p>${member.address}</p>
-                    <p>${member.phone}</p>
-                    <a href="${member.website}">${member.website}</a>
-                `;
-
-                directoryContainer.appendChild(item);
-            });
-        });
-
-    // Function to fetch current weather
-    function fetchCurrentWeather() {
-        const currentWeatherData = {
-            temp: 75,
-            condition: "Partly Cloudy",
-            icon: "https://openweathermap.org/img/wn/03d.png",
-            high: 85,
-            low: 52,
-            humidity: 34,
-            sunrise: "7:30 AM",
-            sunset: "9:59 PM"
-        };
-
-        // Update weather details in the DOM
-        document.getElementById("weather-icon").src = currentWeatherData.icon;
-        document.getElementById("weather-temp").textContent = `Temperature: ${currentWeatherData.temp}°F`;
-        document.getElementById("weather-condition").textContent = `Condition: ${currentWeatherData.condition}`;
-        document.getElementById("weather-high-low").textContent = `High: ${currentWeatherData.high}°F, Low: ${currentWeatherData.low}°F`;
-        document.getElementById("weather-humidity").textContent = `Humidity: ${currentWeatherData.humidity}%`;
-        document.getElementById("weather-sunrise").textContent = `Sunrise: ${currentWeatherData.sunrise}`;
-        document.getElementById("weather-sunset").textContent = `Sunset: ${currentWeatherData.sunset}`;
-    }
-
-    // Function to fetch weather forecast
-    function fetchWeatherForecast() {
-        const forecastData = {
-            today: 90,
-            wednesday: 89,
-            thursday: 69
-        };
-
-        // Update forecast details in the DOM
-        document.getElementById("forecast-today").textContent = `Today: ${forecastData.today}°F`;
-        document.getElementById("forecast-wednesday").textContent = `Wednesday: ${forecastData.wednesday}°F`;
-        document.getElementById("forecast-thursday").textContent = `Thursday: ${forecastData.thursday}°F`;
-    }
-
-    // Function to fetch and display upcoming events
-    function fetchUpcomingEvents() {
-        const events = [
-            { name: "Farmers Market", date: "2023-06-22" },
-            { name: "Summer Festival", date: "2023-07-15" },
-            { name: "Business Expo", date: "2023-08-09" }
-        ];
-
-        const eventsList = document.getElementById("events-list");
-        events.forEach(event => {
-            const li = document.createElement('li');
-            li.textContent = `${event.name} - ${new Date(event.date).toLocaleDateString([], { month: 'long', day: 'numeric', year: 'numeric' })}`;
-            eventsList.appendChild(li);
-        });
-    }
-
-    // Call functions to fetch data when the document is loaded
+    // Function to fetch current weather (if defined elsewhere)
     fetchCurrentWeather();
+    
+    // Function to fetch weather forecast (if defined elsewhere)
     fetchWeatherForecast();
+    
+    // Function to fetch and display upcoming events (if defined elsewhere)
     fetchUpcomingEvents();
 });
-

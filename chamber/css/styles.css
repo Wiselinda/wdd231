@@ -99,12 +99,12 @@ nav ul li a:hover {
 .weather-section {
     margin: 20px auto;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #d6cccc;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 600px;
     text-align: left;
-    flex-direction: wrap;
+    flex-wrap: wrap;
 }
 
 .weather-section h3 {
@@ -149,7 +149,7 @@ nav ul li a:hover {
 .events-section {
     margin: 20px auto;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #d6cccc;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 600px;
@@ -179,7 +179,7 @@ nav ul li a:hover {
     justify-content: space-around;
     margin: 20px 0;
     padding: 20px;
-    background-color: white;
+    background-color: #d6cccc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
@@ -315,68 +315,79 @@ footer {
 }
 
 /* Directory Page Styles */
-.directory-controls {
+.menu {
+    margin-bottom: 1rem;
     text-align: center;
-    margin: 20px 0;
 }
 
-.directory-controls button {
+.menu button {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #007bff;
+    color: #fff;
     border: none;
-    background-color: transparent;
     cursor: pointer;
+    border-radius: 5px;
 }
 
-.directory-controls button img {
-    width: 30px;
-    height: 30px;
+.menu button:hover {
+    background-color: #0056b3;
 }
 
-.directory-view {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 1rem 0;
 }
 
-.directory-view.grid .directory-item {
-    flex: 1;
-    max-width: 200px;
-    text-align: center;
-}
-
-.directory-view.list .directory-item {
-    flex: 1;
-    max-width: 600px;
-    display: flex;
-    align-items: center;
+#directory {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
 }
 
 .directory-item {
-    background-color: white;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
+    background-color: #fff;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     text-align: center;
 }
 
 .directory-item img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    border-radius: 5px;
 }
 
 .directory-item h3 {
-    margin: 10px 0;
+    margin: 0.5rem 0;
 }
 
 .directory-item p {
-    margin: 5px 0;
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+}
+
+.directory-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.directory-item a:hover {
+    text-decoration: underline;
 }
 
 .directory-item a {
     color: #004080;
     text-decoration: none;
+    font-size: 0.9em;
+}
+
+.directory-item a:hover {
+    text-decoration: underline;
 }
 
 /* Responsive Styles */
@@ -423,11 +434,63 @@ footer {
     }
 
     .directory-view.grid {
-        flex-direction: row;
-        flex-wrap: wrap;
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 10px; /* Reduced gap */
     }
 
     .directory-view.list {
         flex-direction: column;
     }
+
+    .directory-item {
+        max-width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+zs
+    .directory-item img {
+        max-width: 90%;
+    }
+
+    .directory-item h3 {
+        font-size: 1em;
+    }
+
+    .directory-item p {
+        font-size: 0.85em;
+    }
+
+    .directory-item a {
+        font-size: 0.85em;
+    }
 }
+
+@media screen and (max-width: 480px) {
+    .directory-view.grid {
+        grid-template-columns: 1fr; /* Stays single column */
+        gap: 10px; /* Maintains smaller gap */
+    }
+
+    .directory-item {
+        max-width: 100%;
+        padding: 8px;
+        margin-bottom: 8px;
+    }
+
+    .directory-item img {
+        max-width: 100%;
+    }
+
+    .directory-item h3 {
+        font-size: 0.9em;
+    }
+
+    .directory-item p {
+        font-size: 0.8em;
+    }
+
+    .directory-item a {
+        font-size: 0.8em;
+    }
+}
+
