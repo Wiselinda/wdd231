@@ -17,9 +17,5 @@ document.addEventListener("DOMContentLoaded", () => {
      // Function to fetch current weather (if defined elsewhere)
      fetchCurrentWeather();
 
-     // Function to fetch weather forecast (if defined elsewhere)
-     fetchWeatherForecast();
- 
-     // Function to fetch and display upcoming events (if defined elsewhere)
-     fetchUpcomingEvents();
-});
+  
+})

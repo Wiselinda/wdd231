@@ -63,12 +63,12 @@ nav ul li a:hover {
     top: 15px;
 }
 
-.menu {
+.view-toggle {
     margin-bottom: 1rem;
     text-align: center;
 }
 
-.menu button {
+.view-toggle button {
     margin: 0.5rem;
     padding: 0.5rem 1rem;
     font-size: 1rem;
@@ -80,7 +80,7 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-.menu button:hover {
+.view-toggle button:hover {
     background-color: #0056b3;
 }
 
@@ -88,6 +88,11 @@ hr {
     border: none;
     border-top: 1px solid #ccc;
     margin: 1rem 0;
+}
+
+.current {
+    color: palevioletred; 
+    font-weight: bold;
 }
 
 #directory {
@@ -151,7 +156,6 @@ hr {
     padding-right: 10px; 
 }
 
-
 footer {
     text-align: center;
     padding: 10px 0;
@@ -160,7 +164,7 @@ footer {
     margin-top: 20px;
 }
 
-.footer p {
+footer p {
     margin: 5px 0;
 }
 
@@ -173,27 +177,48 @@ footer {
         text-align: center;
     }
 
+    nav ul.show {
+        display: flex;
+        position: relative;
+        margin-top: 70px;
+    }
+
     nav ul li {
         margin: 10px 0;
     }
 
     .hamburger {
-        display: block;
+        display: flex;
+        margin-bottom: 10px;
     }
 
-    .menu button {
+    .view-toggle button {
         padding: 0.5rem;
         font-size: 0.9rem;
     }
 
-    #directory.grid {
-        grid-template-columns: 1fr;
+    #directory.list {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
     }
 
-    .directory-item {
-        padding: 0.5rem;
+    #directory.list .list-item {
+        margin-bottom: 20px;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    #directory.list .list-item .content-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #directory.list .list-item .content-container h2,
+    #directory.list .list-item .content-container p,
+    #directory.list .list-item .content-container a {
+        padding-right: 0;
+        padding-bottom: 10px;
     }
 }
-
-
-

@@ -20,7 +20,7 @@
 <body>
     <header>
         <img src="images/chamberlogo.png" class="logo" alt="Logo">
-        <button class="hamburger" id="menu">&#9776;</button>
+        <button class="hamburger">&#9776;</button>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -31,17 +31,17 @@
         </nav>
     </header>
     <main>
-        <div class="menu">
+        <div class="view-toggle">
             <h2>Business Directory</h2>
             <button id="grid-view">⏹️Grid</button>
             <button id="list-view">📄List</button>
         </div>
         <hr>
-        <section id="directory" class="grid"></section>
+        <div id="directory"></div>
     </main>
     <footer>
         <p>&copy; <span id="year"></span> Chamber of Commerce. All rights reserved.</p>
-        <p>Developed by Your Name for WDD 231. Last modified: <span id="last-modified"></span></p>
+        <p>Developed by Wiselinda Zidor for WDD 231. Last modified: <span id="last-modified"></span></p>
     </footer>
     <script src="scripts/directory.js" defer></script>
 </body>

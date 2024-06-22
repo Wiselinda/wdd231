@@ -1,74 +1,98 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // Set the current year in the footer
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Set the last modified date in the footer
-    document.getElementById("last-modified").textContent = new Date(document.lastModified).toLocaleDateString();
-
-    // Handle hamburger menu for mobile navigation
+document.addEventListener('DOMContentLoaded', () => {
+    const directory = document.getElementById('directory');
+    const gridViewBtn = document.getElementById('grid-view');
+    const listViewBtn = document.getElementById('list-view');
+    const yearSpan = document.getElementById('year');
+    const lastModifiedSpan = document.getElementById('last-modified');
     const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('nav ul');
+    const navLinks = document.querySelector('nav ul');
 
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
+    // Set current year
+    yearSpan.textContent = new Date().getFullYear();
 
-    // Grid and list view buttons
-    const gridViewBtn = document.getElementById("grid-view");
-    const listViewBtn = document.getElementById("list-view");
-    const directory = document.getElementById("directory");
+    // Set last modified date
+    lastModifiedSpan.textContent = document.lastModified;
 
-    gridViewBtn.addEventListener("click", () => {
-        directory.classList.remove("list");
-        directory.classList.add("grid");
-    });
-
-    listViewBtn.addEventListener("click", () => {
-        directory.classList.remove("grid");
-        directory.classList.add("list");
-    });
-
-    // Function to fetch member data and display
-    async function fetchAndDisplayMembers() {
+    // Fetch members data
+    async function fetchMembers() {
         try {
-            const response = await fetch("data/members.json");
+            const response = await fetch('https://wiselinda.github.io/wdd231/chamber/data/members.json');
             if (!response.ok) {
-                throw new Error('Network response was not ok');
+                throw new Error('Network response was not ok ' + response.statusText);
             }
-            const data = await response.json();
-            displayMembers(data.members);
+            const members = await response.json();
+            return members;
         } catch (error) {
-            console.error('Error fetching member data:', error);
+            console.error('Error fetching members:', error);
         }
     }
 
-    // Function to display members based on current view mode (grid or list)
-    function displayMembers(members) {
-        const directoryContainer = document.getElementById("directory");
-        directoryContainer.innerHTML = '';
-        const viewMode = directory.classList.contains("grid") ? "grid" : "list";
-
+    // Display members in the directory
+    function displayMembers(members, view) {
+        directory.innerHTML = '';
+        if (view === 'grid') {
+            directory.classList.add('grid');
+            directory.classList.remove('list');
+        } else {
+            directory.classList.add('list');
+            directory.classList.remove('grid');
+        }
         members.forEach(member => {
-            const item = document.createElement("div");
-            item.className = `directory-item ${viewMode === 'grid' ? 'card' : 'list-item'}`;
-
-            item.innerHTML = `
+            const card = document.createElement('div');
+            card.className = view === 'grid' ? 'card' : 'list-item';
+            card.innerHTML = `
                 <div class="image-container">
-                    <img src="images/${member.image}" alt="${member.name}">
+                    <img src="https://wiselinda.github.io/wdd231/chamber/images/${member.image}" alt="${member.name} Logo">
                 </div>
                 <div class="content-container">
-                    <h3>${member.name}</h3>
+                    <h2>${member.name}</h2>
                     <p>${member.address}</p>
                     <p>${member.phone}</p>
                     <a href="${member.website}" target="_blank">${member.website}</a>
                 </div>
             `;
-
-            directoryContainer.appendChild(item);
+            directory.appendChild(card);
         });
     }
 
-    // Initial fetch and display members in grid view
-    fetchAndDisplayMembers();
+    // Fetch and display members initially in grid view
+    fetchMembers().then(members => {
+        if (members) {
+            displayMembers(members, 'grid');
+        }
+    });
+
+    // Event listener for grid view button
+    gridViewBtn.addEventListener('click', () => {
+        fetchMembers().then(members => {
+            if (members) {
+                displayMembers(members, 'grid');
+            }
+        });
+    });
+
+    // Event listener for list view button
+    listViewBtn.addEventListener('click', () => {
+        fetchMembers().then(members => {
+            if (members) {
+                displayMembers(members, 'list');
+            }
+        });
+    });
+
+    // Toggle menu for hamburger
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+    });
+
+    // Highlight the current page link
+    const currentPath = window.location.pathname.split('/').pop();
+    const navLinkElements = document.querySelectorAll('nav ul li a');
+
+    navLinkElements.forEach(link => {
+        const linkPath = link.getAttribute('href').split('/').pop();
+        if (linkPath === currentPath) {
+            link.classList.add('current');
+        }
+    });
 });
