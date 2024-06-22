@@ -8,8 +8,8 @@ body {
 }
 
 header {
-    background-color: #1e88e5;
-    color: white;
+    background-color: #6a1a7a;
+    color: #ffffff;
     padding: 10px 0;
     text-align: center;
     position: relative;
@@ -43,14 +43,14 @@ nav ul {
 }
 
 nav ul li a {
-    color: #1e88e5;
+    color: #ffffff;
     text-decoration: none;
     padding: 5px 10px;
     transition: background-color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #1976d2;
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
 }
 
@@ -73,25 +73,25 @@ nav ul li a:hover {
     padding: 0.5rem 1rem;
     font-size: 1rem;
     font-weight: bold;
-    background-color: #007bff;
-    color: white;
+    background-color: #6a1a7a;
+    color: #ffffff;
     border: none;
     cursor: pointer;
     border-radius: 5px;
 }
 
 .view-toggle button:hover {
-    background-color: #0056b3;
+    background-color: #4d1462;
 }
 
 hr {
     border: none;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #cccccc;
     margin: 1rem 0;
 }
 
 .current {
-    color: #d81b60; 
+    color: #ffffe0; 
     font-weight: bold;
 }
 
@@ -132,7 +132,7 @@ hr {
 }
 
 #directory.list .list-item:nth-child(even) {
-    background-color: #b2dfdb; 
+    background-color: #E1BEE7; 
 }
 
 #directory.list .list-item .image-container {
@@ -159,8 +159,8 @@ hr {
 footer {
     text-align: center;
     padding: 10px 0;
-    background-color: #1e88e5;
-    color: white;
+    background-color: #6a1a7a;
+    color: #ffffff;
     margin-top: 20px;
 }
 
@@ -206,7 +206,7 @@ footer p {
     #directory.list .list-item {
         margin-bottom: 20px;
         padding: 10px;
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid #cccccc;
     }
 
     #directory.list .list-item .content-container {

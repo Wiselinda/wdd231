@@ -46,5 +46,13 @@
         "website": "https://www.metroexpresscarwash.com",
         "image": "metroexpress.webp",
         "membershipLevel": "Silver"
+    },
+    {
+        "name": "Abuja Creative Studios",
+        "address": "12 Ahmadu Bello Way, Lagos, Nigeria",
+        "phone": "+234 803 456 7890",
+        "website": "https://abujacreativestudios.com/",
+        "image": "seo.webp",
+        "membershipLevel": 2
     }
 ]
