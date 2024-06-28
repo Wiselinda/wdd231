@@ -127,7 +127,7 @@ nav ul li a:hover {
 
 .call-to-action a {
     background-color: #6a1a7a;
-    color: #cccccc;
+    color: #ffffff;
     padding: 10px 20px;
     text-decoration: none;
     font-size: large;
@@ -135,7 +135,7 @@ nav ul li a:hover {
 
 .call-to-action a:hover {
     background-color: #4d1462;
-    color: #ffffff;
+    color: #cccccc;
     text-decoration: underline;
 }
 
@@ -201,8 +201,12 @@ section {
     margin: 5px 0;
 }
 
-h2 {
-    color: #4d1462;
+h1 {
+    color: #ffffff;
+}
+
+h5 {
+    color:#4d1462;
 }
 
 .weather {
