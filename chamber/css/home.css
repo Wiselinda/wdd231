@@ -2,13 +2,13 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f4f4f4;
+    background-color: #f5f5f5;
     padding: 0 10px;
 }
 
 header {
-    background-color: #004080;
-    color: white;
+    background-color: #6a1a7a;
+    color: #ffffff;
     padding: 10px 0;
     text-align: center;
     position: relative;
@@ -42,15 +42,20 @@ nav ul {
 }
 
 nav ul li a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     padding: 5px 10px;
     transition: background-color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #0066cc;
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
+}
+
+.current {
+    color: #ffffe0; 
+    font-weight: bold;
 }
 
 .hamburger {
@@ -62,11 +67,31 @@ nav ul li a:hover {
     top: 15px;
 }
 
-/* Hero Section */
+.view-toggle {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.view-toggle button {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #6a1a7a;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.view-toggle button:hover {
+    background-color: #4d1462;
+}
+
 .hero {
     position: relative;
     text-align: center;
-    color: white;
+    color: #ffffff;
 }
 
 .hero-image {
@@ -86,96 +111,141 @@ nav ul li a:hover {
     width: 80%;
     max-width: 600px;
     text-align: center;
-    color: #fff;
+    color: #ffffff;
 }
 
 .hero-text h2, .hero-text p {
     margin: 10px 0;
 }
 
-/* Weather Section */
-.weather-section {
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #d6cccc;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    text-align: left;
-    flex-wrap: wrap;
-}
-
-.weather-section h3 {
+.call-to-action {
+    position: relative;
+    padding: 10px;
+    margin: 40px;
     text-align: center;
-    color: #2c3e50;
-    margin-bottom: 15px;
 }
 
-.weather-info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+.call-to-action a {
+    background-color: #6a1a7a;
+    color: #cccccc;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: large;
+}
+
+.call-to-action a:hover {
+    background-color: #4d1462;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.events {
+    margin: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: #e0f7fa;
+}
+
+section {
+    padding: 20px;
+}
+
+.events, .weather, .spotlights {
     margin-bottom: 20px;
 }
 
-#current-weather {
+.spotlights {
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    gap: 10px;
-}
-
-#weather-forecast{
-    top: 90%;
-    left: 70%;
-}
-
-#weather-icon {
-    width: 60px;
-    height: 60px;
-}
-
-#weather-details p {
-    margin: 5px 0;
-}
-
-.weather-info p {
-    margin: 5px 0;
-}
-
-/* Events Section */
-.events-section {
-    margin: 20px auto;
+    margin: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
     padding: 20px;
-    background-color: #d6cccc;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    top: 80%;
-    right: 70%;
+    background-color: #e0f7fa;
 }
 
-.events-section h3 {
+.spotlight-company {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
     text-align: center;
-    color: #2c3e50;
-    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #ffffff;
 }
 
-#events-list {
-    list-style-type: none;
-    padding: 0;
+.spotlight-company img {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 20px;
 }
 
-#events-list li {
-    margin: 10px 0;
+h2 {
+    color: #4d1462;
 }
 
+.weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+}
+
+.today-weather {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+}
+
+aside {
+    width: 100%;
+    margin: 10px;
+    padding-top: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+aside h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#day-one, #day-two, #day-three {
+    display: inline-block;
+    width: 25%;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+#day-one img, #day-two img, #day-three img {
+    width: 100%;
+    height: auto;
+    max-width: 100px;
+}
+
+.weather #description, #description-one, #description-two, #description-three {
+    text-transform: capitalize;
+} 
 
 footer {
     text-align: center;
     padding: 10px 0;
-    background-color: #004080;
-    color: white;
+    background-color: #6a1a7a;
+    color: #ffffff;
     margin-top: 20px;
 }
 
@@ -183,7 +253,6 @@ footer {
     margin: 5px 0;
 }
 
-/* Responsive Styles */
 @media screen and (max-width: 768px) {
     nav ul {
         display: none;
@@ -192,24 +261,55 @@ footer {
         text-align: center;
     }
 
+    nav ul.show {
+        display: flex;
+        position: relative;
+        margin-top: 70px;
+    }
+
     nav ul li {
         margin: 10px 0;
     }
 
     .hamburger {
-        display: block;
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    .view-toggle button {
+        padding: 0.5rem;
+        font-size: 0.9rem;
     }
 
     .hero-text {
         width: 90%;
-        padding: 10px;
+        padding: 0px;
         font-size: 14px;
     }
 
-    .weather-section, .events-section {
-        max-width: 100%;
-        margin: 10px;
-        padding: 15px;
+    main {
+        grid-template-columns: 1fr; 
+        grid-column-gap: 0; 
+        padding: 10px; 
+    }
+
+    .spotlights {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .spotlight-company {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    #day-one, #day-two, #day-three {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .call-to-action a { 
+        font-size: medium;
+        padding: 0.5rem;
     }
 }
-

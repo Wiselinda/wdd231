@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber of Commerce - Home</title>
+    <meta name="description" content="Chamber Directory for Business">
+    <meta name="author" content="Wiselinda Zidor">
+    <title>Chamber of Commerce - Directory</title>
+    <meta property="og:title" content="Chamber of Commerce-Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://wiselinda.github.io/wdd231/chamber/images/chamberlogo.png">
+    <meta property="og:url" content="https://wiselinda.github.io/wdd231/chamber/directory.html">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -28,53 +37,84 @@
                 <h2>Welcome to Our Community</h2>
                 <p>Your gateway to local business and networking opportunities.</p>
             </div>
-            <div class="weather-section">
-                <h3>Current Weather</h3>
-                <div id="current-weather" class="weather-info">
-                    <!-- Current weather information will be injected here -->
-                    <img id="weather-icon" alt="Weather Icon" src="">
-                    <div id="weather-details">
-                        <p id="weather-temp"></p>
-                        <p id="weather-condition"></p>
-                        <p id="weather-high-low"></p>
-                        <p id="weather-humidity"></p>
-                        <p id="weather-sunrise"></p>
-                        <p id="weather-sunset"></p>
+        </section>
+        <section class="call-to-action">
+        <h2>Join the Chamber of Commerce Today!</h2>
+        <a href="join.html" class="cta-button">Join Now</a>
+        </section>
+        <section class="events">
+            <h2>Current Events</h2>
+            <ul>
+                <li><strong>Business Networking Breakfast</strong>: July 1, 2024, 8:00 AM at ABC Cafe.</li>
+                <li><strong>Small Business Expo</strong>: July 15, 2024, 10:00 AM - 4:00 PM at Downtown Plaza.</li>
+                <li><strong>Annual Charity Gala</strong>: August 5, 2024, 6:00 PM at City Hall Ballroom.</li>
+                <li><strong>Local Farmer's Market</strong>: Every Saturday, 9:00 AM - 2:00 PM at Main Street Park.</li>
+            </ul>
+        </section>
+        <section class="weather">
+            <h2>Current Weather</h2>
+            <div class="Today-Weather">
+                <h3>Today Current Weather</h3>
+                <p id="town">Lagos</p>
+                <p id="description">few clouds</p>
+                <img src="https://openweathermap.org/img/wn/02n@2x.png" alt="02n" id="weather-image" loading="lazy">
+                <p id="temperature">80.91°F</p>
+                <aside>
+                    <h3>3 Days Weather Forecast</h3>
+                    <div id="day-one">
+                        "Tomorrow"
+                        <p id="town-one">Haiti</p>
+                        <p id="description-one">overcast clouds</p>
+                        <img src="https://openweathermap.org/img/wn/04n@2x.png" alt="04n" id="weather-image-one" loading="lazy">
+                        <p id="temperature-one">80.74°F</p>
                     </div>
+                    <div id="day-two">
+                        "Next- 2 days"
+                        <p id="town-two">Haiti</p>
+                        <p id="description-two">Party cloudy</p>
+                        <img src="https://openweathermap.org/img/wn/04n@2x.png" alt="04n" id="weather-image-two" loading="lazy">
+                        <p id="temperature-two">79.74°F</p>
+                    </div>
+                    <div id="day-three">
+                        "Next 3 Days"
+                        <p id="town-one">Haiti</p>
+                        <p id="description-one">Light rain</p>
+                        <img src="https://openweathermap.org/img/wn/10n@2x.png" alt="10n" id="weather-image-three" loading="lazy">
+                        <p id="temperature-one">80.74°F</p>
+                    </div>
+                </aside>
+            </section>
+            <section class="spotlights">
+                <h2>Company Spotlights</h2>
+                <div id="spotlight-company member">
+                    <img src="https://wiselinda.github.io/wdd231/chamber/images/metroexpress.webp" alt="Metro Express">
+                    <h3>Metro Express</h3>
+                    <p>Delmas 19, Ouest Haiti</p>
+                    <p>(208) 888-4073</p>
+                    <a href="https://www.metroexpresscarwash.com">Visit Website</a>
+                    <h4>Membership Level: Silver</h4>
                 </div>
-                <h3>Weather Forecast</h3>
-                <div id="weather-forecast" class="weather-info">
-                    <!-- Weather forecast information will be injected here -->
-                    <p id="forecast-today"></p>
-                    <p id="forecast-wednesday"></p>
-                    <p id="forecast-thursday"></p>
+                <div id="spotlight-company member">
+                    <img src="https://wiselinda.github.io/wdd231/chamber/images/idweb.webp" alt="Idaho Websites">
+                    <h3>Idaho Websites</h3>
+                    <p>Route Aeroport, Port-Au-Prince</p>
+                    <p>(208) 342-9366</p>
+                    <a href="https://idahowebsites.com/">Visit Website</a>
+                    <h4>Membership Level: Gold</h4>
                 </div>
-            </div>
-            <div class="events-section">
-                <h3>Upcoming Events</h3>
-                <ul id="events-list">
-                    <!-- Events will be injected here -->
-                </ul>
-            </div>
-        </section>
-        <section class="features">
-            <article>
-                <h3>Community Information</h3>
-                <p>Stay informed with the latest news and updates from our community.</p>
-            </article>
-            <article>
-                <h3>Weather</h3>
-                <p>Get the current weather and forecasts for the area.</p>
-            </article>
-            <article>
-                <h3>Business Spotlight</h3>
-                <p>Highlighting successful businesses and their contributions.</p>
-            </article>
-        </section>
+                <div id="spotlight-company member">
+                    <img src="https://wiselinda.github.io/wdd231/chamber/images/peppershock.webp" alt="Peppershock Media">
+                    <h3>Peppershock Media</h3>
+                    <p>Rue Justin Juste, Cap-Haitien</p>
+                    <p>(208) 342-9366</p>
+                    <a href="https://idahowebsites.com/">Visit Website</a>
+                    <h4>Membership Level: Gold</h4>
+                </div>
+            </section>
     </main>
     <footer>
         <p>&copy; <span id="year"></span> Chamber of Commerce. All rights reserved.</p>
-        <p>Developed by Your Name for WDD 231. Last modified: <span id="last-modified"></span></p>
+        <p>Developed by Wiselinda Zidor for WDD 231. Last modified: <span id="last-modified"></span></p>
     </footer>
     <script src="scripts/home.js" defer></script>
 </body>
