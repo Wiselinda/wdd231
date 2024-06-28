@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Fetch and display company spotlights
-    fetch('https://jegs01.github.io/wdd231/chamber/data/members.json')
+    fetch('https://wiselinda.github.io/wdd231/chamber/data/members.json')
         .then(response => response.json())
         .then(companies => {
             displaySpotlights(companies);
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
 
             companyDiv.innerHTML = `
-                <img src="https://jegs01.github.io/wdd231/chamber/images/${company.image}" alt="${company.name}">
+                <img src="https://wiselinda.github.io/wdd231/chamber/images/${company.image}" alt="${company.name}">
                 <h3>${company.name}</h3>
                 <p>${company.address}</p>
                 <p>${company.phone}</p>
@@ -111,11 +111,11 @@ document.addEventListener("DOMContentLoaded", function() {
             spotlightContainer.appendChild(companyDiv);
         });
     }
-     const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+     const currentPath = window.location.pathname.split('/').pop() || 'home.html';
     const navLinkElements = document.querySelectorAll('nav ul li a');
 
     navLinkElements.forEach(link => {
-        const linkPath = link.getAttribute('href').split('/').pop() || 'index.html';
+        const linkPath = link.getAttribute('href').split('/').pop() || 'home.html';
 
         if (linkPath === currentPath) {
             link.classList.add('current');
