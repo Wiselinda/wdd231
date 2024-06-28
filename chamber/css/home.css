@@ -157,29 +157,48 @@ section {
 }
 
 .spotlights {
-    display: inline-block;
-    justify-content: space-around;
-    align-items: center;
-    margin: 20px;
-    border: 1px solid #cccccc;
-    border-radius: 10px;
-    padding: 20px;
+    width: 100%;
     text-align: center;
     background-color: #e0f7fa;
+    padding-bottom: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.spotlights h2 {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.spotlights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .spotlight-company {
-    display: inline-block;
-    width: 25%;
-    text-align: center;
+    display: flex;
     align-items: center;
-    margin: 20px;
-    border-radius: 10px;
-    padding: 20px;
+    width: 100%;
+    max-width: 30%;
+    margin: 10px;
+    box-sizing: border-box;
+    border: 1px solid #cccccc; /* Add border around each div */
+    padding: 10px;
 }
 
 .spotlight-company img {
-    max-width: 50%;
+    max-width: 100px; /* Adjust the width as needed */
+    height: auto;
+    margin-right: 20px; /* Space between the image and the text */
+}
+
+.company-info {
+    text-align: left; /* Align the text to the left */
+}
+
+.spotlight-company h3, .spotlight-company p, .spotlight-company a, .spotlight-company h4 {
+    margin: 5px 0;
 }
 
 h2 {
@@ -290,14 +309,21 @@ footer {
         padding: 10px; 
     }
 
-    .spotlights {
+    .spotlight-company {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        max-width: 45%;
+        
     }
 
-    .spotlight-company {
-        width: 80%;
-        margin-bottom: 20px;
+    .spotlight-company img {
+        margin-right: 0;
+        margin-bottom: 10px;
+        max-width: 100%; /* Make image full width on smaller screens */
+    }
+
+    .company-info {
+        text-align: center; /* Center align text on smaller screens */
     }
 
     #day-one, #day-two, #day-three {
@@ -308,5 +334,22 @@ footer {
     .call-to-action a { 
         font-size: medium;
         padding: 0.5rem;
+    }
+}
+
+/* Responsive design for small screens such as 400px */
+@media (max-width: 430px) {
+    .spotlights {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .spotlight-company {
+        max-width: 100%;
+    }
+
+     .company-info {
+        text-align: center;
+       padding-left: 20%;
     }
 }

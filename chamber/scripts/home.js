@@ -28,9 +28,9 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Fetch and display weather data
-    const apiKey = 'a3931b5210cc445c82393bfca94b8456';
-    const lat = 6.524754155504311;
-    const lon = 3.3936791843556624;
+    const apiKey = 'ee2d2bcce67e347078f314f190758aba';
+    const lat = 18.560502469649347;
+    const lon = -72.30124819596125;
 
     fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`)
         .then(response => response.json())
