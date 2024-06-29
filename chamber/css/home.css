@@ -6,12 +6,11 @@ body {
     padding: 0 10px;
 }
 
+/* Header Styles */
 header {
     background-color: #6a1a7a;
     color: #ffffff;
     padding: 10px 0;
-    text-align: center;
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,6 +27,7 @@ header img.logo {
     margin-right: 20px;
 }
 
+/* Navigation Styles */
 nav {
     display: flex;
     justify-content: center;
@@ -54,7 +54,7 @@ nav ul li a:hover {
 }
 
 .current {
-    color: #ffffe0; 
+    color: #ffffe0;
     font-weight: bold;
 }
 
@@ -67,6 +67,7 @@ nav ul li a:hover {
     top: 15px;
 }
 
+/* View Toggle Button */
 .view-toggle {
     margin-bottom: 1rem;
     text-align: center;
@@ -88,6 +89,7 @@ nav ul li a:hover {
     background-color: #4d1462;
 }
 
+/* Hero Section */
 .hero {
     position: relative;
     text-align: center;
@@ -97,7 +99,6 @@ nav ul li a:hover {
 .hero-image {
     width: 100%;
     height: auto;
-    display: block;
 }
 
 .hero-text {
@@ -118,8 +119,8 @@ nav ul li a:hover {
     margin: 10px 0;
 }
 
+/* Call-to-Action Section */
 .call-to-action {
-    position: relative;
     padding: 10px;
     margin: 40px;
     text-align: center;
@@ -139,6 +140,7 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+/* Events Section */
 .events {
     margin: 20px;
     border: 1px solid #cccccc;
@@ -148,14 +150,21 @@ nav ul li a:hover {
     background-color: #e0f7fa;
 }
 
+/* Common Section Styles */
 section {
     padding: 20px;
-}
-
-.events, .weather, .spotlights {
     margin-bottom: 20px;
 }
 
+.spotlights, .weather {
+    width: 100%;
+    background-color: #e0f7fa;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+/* Spotlights Section */
 .spotlights {
     width: 100%;
     text-align: center;
@@ -201,14 +210,16 @@ section {
     margin: 5px 0;
 }
 
+/* Text Styles */
 h1 {
     color: #ffffff;
 }
 
 h5 {
-    color:#4d1462;
+    color: #4d1462;
 }
 
+/* Weather Section */
 .weather {
     display: flex;
     flex-direction: column;
@@ -225,19 +236,6 @@ h5 {
     border: 1px solid #cccccc;
     border-radius: 10px;
     background-color: #f1f1f1;
-}
-
-aside {
-    width: 100%;
-    margin: 10px;
-    padding-top: 20px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-aside h2 {
-    text-align: center;
-    margin-bottom: 20px;
 }
 
 #day-one, #day-two, #day-three {
@@ -259,8 +257,9 @@ aside h2 {
 
 .weather #description, #description-one, #description-two, #description-three {
     text-transform: capitalize;
-} 
+}
 
+/* Footer Styles */
 footer {
     text-align: center;
     padding: 10px 0;
@@ -273,6 +272,7 @@ footer {
     margin: 5px 0;
 }
 
+/* Responsive Design */
 @media screen and (max-width: 768px) {
     nav ul {
         display: none;
@@ -307,27 +307,20 @@ footer {
         font-size: 14px;
     }
 
-    main {
-        grid-template-columns: 1fr; 
-        grid-column-gap: 0; 
-        padding: 10px; 
-    }
-
     .spotlight-company {
         flex-direction: column;
         align-items: flex-start;
         max-width: 45%;
-        
     }
 
     .spotlight-company img {
         margin-right: 0;
         margin-bottom: 10px;
-        max-width: 100%; /* Make image full width on smaller screens */
+        max-width: 100%;
     }
 
     .company-info {
-        text-align: center; /* Center align text on smaller screens */
+        text-align: center;
     }
 
     #day-one, #day-two, #day-three {
@@ -335,13 +328,12 @@ footer {
         margin-bottom: 20px;
     }
 
-    .call-to-action a { 
+    .call-to-action a {
         font-size: medium;
         padding: 0.5rem;
     }
 }
 
-/* Responsive design for small screens such as 400px */
 @media (max-width: 430px) {
     .spotlights {
         flex-direction: column;
@@ -352,8 +344,8 @@ footer {
         max-width: 100%;
     }
 
-     .company-info {
+    .company-info {
         text-align: center;
-       padding-left: 20%;
+        padding-left: 20%;
     }
 }
