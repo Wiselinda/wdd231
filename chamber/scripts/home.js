@@ -111,11 +111,11 @@ document.addEventListener("DOMContentLoaded", function() {
             spotlightContainer.appendChild(companyDiv);
         });
     }
-     const currentPath = window.location.pathname.split('/').pop() || 'home.html';
+     const currentPath = window.location.pathname.split('/').pop() || 'index.html';
     const navLinkElements = document.querySelectorAll('nav ul li a');
 
     navLinkElements.forEach(link => {
-        const linkPath = link.getAttribute('href').split('/').pop() || 'home.html';
+        const linkPath = link.getAttribute('href').split('/').pop() || 'index.html';
 
         if (linkPath === currentPath) {
             link.classList.add('current');
