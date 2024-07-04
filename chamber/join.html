@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber of Commerce - Join Us</title>
+    <meta name="description" content="Chamber Directory for Business">
+    <meta name="author" content="Wiselinda Zidor">
+    <title>Chamber of Commerce - Join</title>
+    <meta property="og:title" content="Chamber of Commerce - Join">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://wiselinda.github.io/wdd231/chamber/images/chamberlogo.png">
+    <meta property="og:url" content="https://wiselinda.github.io/wdd231/chamber/join.html">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/join.css">
+    <link rel="stylesheet" href="css/join.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -17,7 +26,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="discover.html">Discover</a></li>
                 <li><a href="directory.html">Directory</a></li>
-                <li><a href="join.html">Join</a></li>
+                <li><a href="join.html" class="current">Join</a></li> 
             </ul>
         </nav>
     </header>
@@ -26,44 +35,76 @@
             <h2>Join the Chamber</h2>
             <p>Discover the benefits of becoming a member and join our thriving community.</p>
             <div class="membership-levels">
-                <article>
-                    <h3>Non-Profit</h3>
-                    <p>Basic membership for non-profit organizations.</p>
-                </article>
-                <article>
-                    <h3>Silver</h3>
-                    <p>Enhanced membership with additional perks.</p>
-                </article>
-                <article>
-                    <h3>Gold</h3>
-                    <p>Premium membership with full benefits.</p>
-                </article>
+                <!-- Membership levels dynamically populated by JavaScript -->
             </div>
+            <button class="learn-more-button" id="modal-btn">Learn More about Membership Levels</button>
         </section>
         <section class="application-form">
             <h3>Membership Application</h3>
-            <form action="#" method="post">
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" required>
-                
+            <form action="thankyou.html" method="get" id="membershipForm"> <!-- Use 'get' method and correct action -->
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" autocomplete="given-name" required>
+
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" autocomplete="family-name" required>
+
+                <label for="orgTitle">Organizational Title:</label>
+                <input type="text" id="orgTitle" name="orgTitle" autocomplete="organization-title" pattern="[a-zA-Z\s\-]{7,}" title="Only alphabets, hyphens, and spaces allowed with a minimum of 7 characters">
+
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="level">Membership Level:</label>
-                <select id="level" name="level">
+                <input type="email" id="email" name="email" autocomplete="email" required placeholder="e.g., example@example.com">
+
+                <label for="phone">Mobile Phone:</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+
+                <label for="orgName">Business/Organization Name:</label>
+                <input type="text" id="orgName" name="orgName" autocomplete="organization" required>
+
+                <label for="membershipLevel">Membership Level:</label>
+                <select id="membershipLevel" name="membershipLevel" required>
                     <option value="non-profit">Non-Profit</option>
+                    <option value="bronze">Bronze</option>
                     <option value="silver">Silver</option>
                     <option value="gold">Gold</option>
                 </select>
-                
+
+                <label for="orgDescription">Business/Organization Description:</label>
+                <textarea id="orgDescription" name="orgDescription"></textarea>
+
+                <input type="hidden" id="timestamp" name="timestamp">
+
                 <input type="submit" value="Join Now">
             </form>
         </section>
     </main>
     <footer>
         <p>&copy; <span id="year"></span> Chamber of Commerce. All rights reserved.</p>
-        <p>Developed by Your Name for WDD 231. Last modified: <span id="last-modified"></span></p>
+        <p>Developed by Wiselinda Zidor for WDD 231. Last modified: <span id="last-modified"></span></p>
     </footer>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Membership Benefits</h3>
+            <div id="membershipDetails">
+                <div id="nonProfitDetails" class="membership-detail">
+                    <h4>Non-Profit Membership</h4>
+                    <p>Basic membership for non-profit organizations. Includes access to community events and networking opportunities.</p>
+                </div>
+                <div id="bronzeDetails" class="membership-detail">
+                    <h4>Bronze Membership</h4>
+                    <p>Affordable membership with limited benefits. Includes basic directory listing and access to selected events.</p>
+                </div>
+                <div id="silverDetails" class="membership-detail">
+                    <h4>Silver Membership</h4>
+                    <p>Enhanced membership with additional perks. Includes priority directory listing, exclusive workshops, and discounts on events.</p>
+                </div>
+                <div id="goldDetails" class="membership-detail">
+                    <h4>Gold Membership</h4>
+                    <p>Premium membership with full benefits. Includes premium directory listing, VIP access to all events, marketing opportunities, and more.</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="scripts/join.js" defer></script>
 </body>
 </html>

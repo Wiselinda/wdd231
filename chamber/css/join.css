@@ -1,18 +1,16 @@
-/* General Styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f4f4f4;
+    background-color: #f5f5f5;
     padding: 0 10px;
 }
 
+/* Header Styles */
 header {
-    background-color: #004080;
-    color: white;
+    background-color: #6a1a7a;
+    color: #ffffff;
     padding: 10px 0;
-    text-align: center;
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,6 +27,7 @@ header img.logo {
     margin-right: 20px;
 }
 
+/* Navigation Styles */
 nav {
     display: flex;
     justify-content: center;
@@ -43,15 +42,20 @@ nav ul {
 }
 
 nav ul li a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     padding: 5px 10px;
     transition: background-color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #0066cc;
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
+}
+
+.current {
+    color: #ffffe0;
+    font-weight: bold;
 }
 
 .hamburger {
@@ -63,73 +67,153 @@ nav ul li a:hover {
     top: 15px;
 }
 
-.membership-info {
-    padding: 20px;
-    background-color: white;
-    margin: 20px 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: center;
-}
-
 .membership-levels {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.membership-info {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.membership-info h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.membership-info p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #666;
 }
 
 .membership-levels article {
     flex: 1;
-    padding: 20px;
-    max-width: 200px;
-    margin: 10px;
+    padding: 10px;
     text-align: center;
-    border: 1px solid #ddd;
-    border-radius: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.membership-levels article:hover {
+    background-color: #f0f0f0;
 }
 
 .application-form {
+    background-color: #fff;
     padding: 20px;
-    background-color: white;
-    margin: 20px 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
 }
 
 .application-form label {
     display: block;
-    margin-top: 10px;
+    margin: 10px 0;
+    font-weight: bold;
 }
 
 .application-form input,
-.application-form select {
+.application-form select,
+.application-form textarea {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    border: 1px solid #ddd;
 }
 
 .application-form input[type="submit"] {
-    background-color: #004080;
-    color: white;
+    background-color: #4d1462;
+    color: #fff;
     border: none;
+    padding: 10px 20px;
     cursor: pointer;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .application-form input[type="submit"]:hover {
-    background-color: #003366;
+    background-color: #6a1a7a;
 }
 
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+}
+
+/* Style for specific elements inside modal content */
+.modal-content h3 {
+    color: #333; /* Your desired color for h3 */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.modal-content h4 {
+    color: #333; /* Your desired color for h4 */
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.modal-content p {
+    color: #888; /* Your desired color for p */
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+/* Footer Styles */
 footer {
     text-align: center;
     padding: 10px 0;
-    background-color: #004080;
-    color: white;
+    background-color: #6a1a7a;
+    color: #ffffff;
     margin-top: 20px;
 }
 
@@ -139,24 +223,34 @@ footer {
 
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
-    nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-    }
+   /* Navigation Styles */
+   nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
 
-    nav ul li {
-        margin: 10px 0;
-    }
+nav ul.show {
+    display: flex;
+    position: relative;
+    margin-top: 70px;
+}
 
-    .hamburger {
-        display: block;
-    }
+nav ul li {
+    margin: 10px 0;
+}
 
-    .membership-levels {
-        flex-direction: column;
-        text-align: center;
-    }
+.current {
+    color: #ffffe0;
+    font-weight: bold;
+}
+
+.hamburger {
+    display: flex;
+    margin-bottom: 10px;
+    
+}
+
 }
 

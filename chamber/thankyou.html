@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for joining the Chamber of Commerce">
+    <meta name="author" content="Wiselinda Zidor">
+    <title>Thank You for Joining</title>
+    <meta property="og:title" content="Thank You for Joining">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://wiselinda.github.io/wdd231/chamber/images/chamberlogo.png">
+    <meta property="og:url" content="https://wiselinda.github.io/wdd231/chamber/thankyou.html">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/thankyou.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="images/chamberlogo.png" class="logo" alt="Chamber of Commerce Logo">
+        <button class="hamburger" id="menu">&#9776;</button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="thankyou-message">
+            <h2>Thank You for Joining!</h2>
+            <p>We have received your membership application. Here are your details:</p>
+            <div class="form-details">
+                <p><strong>First Name:</strong> <span id="first-name">N/A</span></p>
+                <p><strong>Last Name:</strong> <span id="last-name">N/A</span></p>
+                <p><strong>Email:</strong> <span id="email">N/A</span></p>
+                <p><strong>Mobile Phone:</strong> <span id="phone">N/A</span></p>
+                <p><strong>Business/Organization Name:</strong> <span id="organization">N/A</span></p>
+                <p><strong>Timestamp:</strong> <span id="timestamp">N/A</span></p>
+            </div>
+            <p>We will review your application and contact you shortly.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Chamber of Commerce. All rights reserved.</p>
+        <p>Developed by Wiselinda Zidor for WDD 231. Last modified: <span id="last-modified"></span></p>
+    </footer>
+    <script src="scripts/join.js" defer></script>
+</body>
+</html>
