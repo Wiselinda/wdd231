@@ -83,7 +83,7 @@ nav ul li a:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.membership-info h2 {
+.membership-info h1 {
     font-size: 2.5em;
     color: #333;
     margin-bottom: 20px;
