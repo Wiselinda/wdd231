@@ -85,22 +85,22 @@ nav ul li a:hover {
     max-width: 800px;
     margin: auto;
     padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .thankyou-message h2 {
     font-size: 2em;
-    color: #333;
+    color: #1a1a1a;
     margin-bottom: 10px;
 }
 
 .thankyou-message p {
     font-size: 1.1em;
     line-height: 1.6;
-    color: #555;
+    color: #333333;
 }
 
 .thankyou-message .form-details {
@@ -109,7 +109,7 @@ nav ul li a:hover {
 
 .thankyou-message .form-details p {
     font-size: 1em;
-    color: #777;
+    color: #444444;
     margin-bottom: 10px;
 }
 
@@ -122,14 +122,15 @@ nav ul li a:hover {
 
 .user-info h2 {
     margin-bottom: 10px;
-    color: #4d1462;
+    color: #3b0a45;
 }
 
 .user-info p {
-    background-color: #f1f1f1;
+    background-color: #ffffff;
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
+    color: #333333;
     word-wrap: break-word;
 }
 
