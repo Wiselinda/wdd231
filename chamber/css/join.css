@@ -1,16 +1,18 @@
+/* Base Styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f5f5f5;
     padding: 0 10px;
+    margin: 0;
 }
 
 /* Header Styles */
 header {
     background-color: #6a1a7a;
     color: #ffffff;
-    padding: 10px 0;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,13 +20,10 @@ header {
 
 header h1 {
     margin: 0;
-    flex: 1;
-    text-align: left;
 }
 
 header img.logo {
     height: 50px;
-    margin-right: 20px;
 }
 
 /* Navigation Styles */
@@ -39,6 +38,12 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0;
 }
 
 nav ul li a {
@@ -48,14 +53,10 @@ nav ul li a {
     transition: background-color 0.3s;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.current {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
-}
-
-.current {
-    color: #ffffe0;
-    font-weight: bold;
 }
 
 .hamburger {
@@ -67,15 +68,10 @@ nav ul li a:hover {
     top: 15px;
 }
 
-.membership-levels {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-.membership-info {
+/* Common Section Styles */
+.section {
     max-width: 800px;
-    margin: auto;
+    margin: 20px auto;
     padding: 20px;
     background-color: #ffffff;
     border: 1px solid #ddd;
@@ -83,16 +79,26 @@ nav ul li a:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.membership-info h1 {
-    font-size: 2.5em;
+.section h1,
+.section h2,
+.section h3,
+.section h4 {
     color: #333;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
-.membership-info p {
+.section p {
     font-size: 1.1em;
     line-height: 1.6;
     color: #1a1a1a;
+    margin: 10px 0;
+}
+
+/* Membership Page Styles */
+.membership-levels {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .membership-levels article {
@@ -101,7 +107,7 @@ nav ul li a:hover {
     text-align: center;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin: 0 10px;
+    margin: 10px;
     transition: background-color 0.3s;
     cursor: pointer;
 }
@@ -111,12 +117,11 @@ nav ul li a:hover {
 }
 
 .application-form {
-    background-color: #fff;
+    max-width: 600px;
+    margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 20px auto;
 }
 
 .application-form label {
@@ -148,7 +153,7 @@ nav ul li a:hover {
     background-color: #6a1a7a;
 }
 
-/* Modal styles */
+/* Modal Styles */
 .modal {
     display: none;
     position: fixed;
@@ -170,23 +175,13 @@ nav ul li a:hover {
     border-radius: 10px;
 }
 
-/* Style for specific elements inside modal content */
-.modal-content h3 {
-    color: #333; /* Your desired color for h3 */
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.modal-content h4 {
-    color: #333; /* Your desired color for h4 */
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 8px;
+.modal-content h3,
+.modal-content h4,
+.modal-content p {
+    color: #333;
 }
 
 .modal-content p {
-    color: #888; /* Your desired color for p */
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 12px;
@@ -206,8 +201,6 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-
-
 /* Footer Styles */
 footer {
     text-align: center;
@@ -217,40 +210,153 @@ footer {
     margin-top: 20px;
 }
 
-.footer p {
-    margin: 5px 0;
-}
-
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
-   /* Navigation Styles */
-   nav ul {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul.show {
+        display: flex;
+        position: relative;
+        margin-top: 70px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: flex;
+        margin-bottom: 10px;
+    }
 }
 
-nav ul.show {
-    display: flex;
-    position: relative;
-    margin-top: 70px;
+/* New Styles for Discover Page */
+
+/* Grid Layout for Discover Page */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+    margin: 20px 0;
 }
 
-nav ul li {
-    margin: 10px 0;
+.sidebar {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.current {
-    color: #ffffe0;
-    font-weight: bold;
+.sidebar section {
+    margin-bottom: 20px;
 }
 
-.hamburger {
-    display: flex;
+.sidebar h2 {
+    color: #6a1a7a;
+    font-size: 24px;
     margin-bottom: 10px;
-    
 }
 
+.sidebar h3 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 5px;
 }
 
+.sidebar p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.sidebar ul li {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 5px;
+}
+
+.sidebar ul li:before {
+    content: "\2022";
+    color: #6a1a7a;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.main-content {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content h2 {
+    color: #6a1a7a; /* Purple color for heading */
+    font-size: 28px; /* Adjust font size */
+    margin-bottom: 20px; /* Add some bottom margin */
+    text-align: center; /* Center align only the h2 heading */
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.image-gallery figure {
+    flex: 1 1 calc(33.333% - 10px);
+    margin: 0;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Lazy Loading */
+.lazy {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.lazy.loaded {
+    opacity: 1;
+}
+
+/* Responsive Styles for Discover Page */
+@media screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .image-gallery figure {
+        flex: 1 1 100%;
+    }
+
+    .image-gallery img:hover {
+        transform: none;
+    }
+}

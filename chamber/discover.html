@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chamber Directory for Business">
+    <meta name="author" content="Wiselinda Zidor">
     <title>Chamber of Commerce - Discover</title>
+    <meta property="og:title" content="Chamber of Commerce - Discover">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://wiselinda.github.io/wdd231/chamber/images/chamberlogo.png">
+    <meta property="og:url" content="https://wiselinda.github.io/wdd231/chamber/join.html">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/discover.css">
+    <link rel="stylesheet" href="css/join.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
-<body>
+<body> 
     <header>
         <img src="images/chamberlogo.png" class="logo" alt="Logo">
         <button class="hamburger" id="menu">&#9776;</button>
@@ -21,25 +30,61 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="history">
-            <h2>Discover Our Area</h2>
-            <p>Learn about the history, demographics, and current events in our region.</p>
-            <div class="image-montage">
-                <img src="images/idweb.jpg" alt="Local landmark 1">
-                <img src="images/surge.jpg" alt="Local landmark 2">
-                <img src="images/graphiczen.jpg" alt="Local landmark 3">
+    <main class="grid-container">
+        <aside class="sidebar">
+            <h2>Welcome to Our Area!</h2>
+            <p id="visitMessage"></p> <!-- New element for visit message -->
+            <section>
+                <h3>Demographics</h3>
+                <p>Population: 50,000</p>
+                <p>Median Age: 35</p>
+                <p>Median Household Income: $60,000</p>
+            </section>
+            <section>
+                <h3>Upcoming Events</h3>
+                <ul>
+                    <li>Farmers Market - Every Saturday</li>
+                    <li>Annual Festival - August 12</li>
+                    <li>Art Walk - September 5</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Attractions</h3>
+                <p>Beautiful parks, museums, and a vibrant downtown area await you!</p>
+            </section>
+        </aside>
+
+        <section class="main-content">
+            <h2>Gallery</h2>
+            <div class="image-gallery">
+                <figure>
+                    <img data-src="images/photo1.jpg" alt="Local Business Scene" class="lazy">
+                    <figcaption>Local Business Scene</figcaption>
+                </figure>
+                <figure>
+                    <img data-src="images/photo2.jpg" alt="Business Networing Event" class="lazy">
+                    <figcaption>Business Networing Event</figcaption>
+                </figure>
+                <figure>
+                    <img data-src="images/photo3.jpg" alt="Community Engagement" class="lazy">
+                    <figcaption>Community Engagement</figcaption>
+                </figure>
+                <figure>
+                    <img data-src="images/photo4.jpg" alt="Historical Highlights" class="lazy">
+                    <figcaption>Historical Highlights</figcaption>
+                </figure>
+                <figure>
+                    <img data-src="images/photo5.jpg" alt="Business Professionals" class="lazy">
+                    <figcaption>Business Professionals</figcaption>
+                </figure>
+                <figure>
+                    <img data-src="images/photo6.jpg" alt="Chamber Services and Ressources" class="lazy">
+                    <figcaption>Chamber Services and Ressources</figcaption>
+                </figure>
             </div>
         </section>
-        <section class="current-events">
-            <h3>Current Events</h3>
-            <ul>
-                <li>Event 1: Community Fair - Date and Details</li>
-                <li>Event 2: Business Expo - Date and Details</li>
-                <li>Event 3: Networking Luncheon - Date and Details</li>
-            </ul>
-        </section>
     </main>
+
     <footer>
         <p>&copy; <span id="year"></span> Chamber of Commerce. All rights reserved.</p>
         <p>Developed by Your Name for WDD 231. Last modified: <span id="last-modified"></span></p>
