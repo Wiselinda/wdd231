@@ -362,7 +362,7 @@ footer {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.main-content h2 {
+.main-content h1, .main-content h2 {
     color: #6a1a7a; /* Purple color for heading */
     font-size: 28px; /* Adjust font size */
     margin-bottom: 20px; /* Add some bottom margin */
