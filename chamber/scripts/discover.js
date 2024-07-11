@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Lazy load images
     const lazyImages = document.querySelectorAll('img.lazy');
 
-    const lazyLoad = function() {
+    const lazyLoad = () => {
         lazyImages.forEach(img => {
             if (img.getBoundingClientRect().top < window.innerHeight && !img.classList.contains('loaded')) {
                 img.src = img.dataset.src;
@@ -25,9 +25,26 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
-    window.addEventListener('scroll', lazyLoad);
-    window.addEventListener('resize', lazyLoad);
-    window.addEventListener('orientationchange', lazyLoad);
+    if ("IntersectionObserver" in window) {
+        let lazyImageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    let lazyImage = entry.target;
+                    lazyImage.src = lazyImage.dataset.src;
+                    lazyImage.classList.add('loaded');
+                    lazyImageObserver.unobserve(lazyImage);
+                }
+            });
+        });
+
+        lazyImages.forEach(lazyImage => {
+            lazyImageObserver.observe(lazyImage);
+        });
+    } else {
+        window.addEventListener('scroll', lazyLoad);
+        window.addEventListener('resize', lazyLoad);
+        window.addEventListener('orientationchange', lazyLoad);
+    }
 
     // Check for last visit date
     const lastVisitKey = 'lastVisit';
@@ -75,3 +92,4 @@ document.addEventListener("DOMContentLoaded", () => {
         fetchCurrentEventsData();
     }
 });
+
