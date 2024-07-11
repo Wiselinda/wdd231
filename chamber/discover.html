@@ -34,13 +34,13 @@
         <aside class="sidebar">
             <h2>Welcome to Our Area!</h2>
             <p id="visitMessage"></p> <!-- New element for visit message -->
-            <section>
+            <section class="demographics">
                 <h3>Demographics</h3>
                 <p>Population: 50,000</p>
                 <p>Median Age: 35</p>
                 <p>Median Household Income: $60,000</p>
             </section>
-            <section>
+            <section class="events">
                 <h3>Upcoming Events</h3>
                 <ul>
                     <li>Farmers Market - Every Saturday</li>
@@ -48,9 +48,23 @@
                     <li>Art Walk - September 5</li>
                 </ul>
             </section>
-            <section>
+            <section class="attractions">
                 <h3>Attractions</h3>
-                <p>Beautiful parks, museums, and a vibrant downtown area await you!</p>
+                <ul>
+                    <li>
+                        <a href="https://i.pinimg.com/originals/65/3b/88/653b8877c78c5906fe710030fc097dd3.jpg">Fort de Oliviers Haiti Local Fandom</a>
+                    </li>
+                    <li>
+                        <a href="https://media-cdn.tripadvisor.com/media/photo-s/0c/4c/9b/13/entree-du-marche-de-fer.jpg">Marche de Fer, Port-Au-Prince</a>
+                    </li>
+                    <li>
+                        <a href="https://i.pinimg.com/originals/37/00/6d/37006d779ba2759ade1dfe20a5256ff4.jpg">Negre Marron Attraction Haiti</a>
+                    </li>
+                </ul>
+            </section>
+            <section class="calendar">
+                <h3>Calendar</h3>
+                <iframe src="https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID&ctz=YOUR_TIME_ZONE" class="custom-iframe"></iframe>
             </section>
         </aside>
 
@@ -87,7 +101,7 @@
 
     <footer>
         <p>&copy; <span id="year"></span> Chamber of Commerce. All rights reserved.</p>
-        <p>Developed by Your Name for WDD 231. Last modified: <span id="last-modified"></span></p>
+        <p>Developed by Wiselinda Zidor for WDD 231. Last modified: <span id="last-modified"></span></p>
     </footer>
     <script src="scripts/discover.js" defer></script>
 </body>

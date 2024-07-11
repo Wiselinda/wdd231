@@ -7,11 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Function to handle hamburger menu for mobile navigation
     const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('nav ul');
+    const navLinks = document.querySelector('nav ul');
 
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
+    hamburger.addEventListener('click', () => { 
+        navLinks.classList.toggle('show');
     });
 
     // Lazy load images
