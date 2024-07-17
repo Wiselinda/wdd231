@@ -94,4 +94,4 @@ function displayFormDetails() {
     document.getElementById('organization').textContent = urlParams.get('orgName') || 'N/A';
     document.getElementById('message').textContent = urlParams.get('message') || 'N/A';
     document.getElementById('timestamp').textContent = new Date(urlParams.get('timestamp')).toLocaleString() || 'N/A';
-} 
+}

@@ -387,17 +387,39 @@ button:hover {
     cursor: pointer;
 }
 
-.booth-detail {
-    display: none; /* Hide booth details by default */
-    margin-bottom: 15px;
+/* Product and Event Styles */
+.product-catalog, .events-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
-.booth-detail h4 {
+.product, .event {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    width: calc(33.333% - 2rem);
+    box-sizing: border-box;
+}
+
+.product img, .event img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product h3, .event h3 {
     margin-top: 0;
 }
 
-.booth-detail p {
-    margin-bottom: 0;
+button {
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
 }
 
 /* Responsive navigation */
@@ -410,6 +432,13 @@ button:hover {
 
     nav ul li {
         margin: 5px 0;
+    }
+    .hamburger {
+        display: block;
+    }
+    
+    .product, .event {
+        width: calc(50% - 2rem);
     }
 }
 
@@ -426,5 +455,8 @@ button:hover {
     #day-one, #day-two, #day-three {
         width: 50%;
         margin-bottom: 20px;
+    }
+    .product, .event {
+        width: calc(100% - 2rem);
     }
 }

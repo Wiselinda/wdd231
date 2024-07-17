@@ -101,7 +101,7 @@ nav ul li a.current {
     flex-wrap: wrap;
 }
 
-.membership-levels article {
+.membership-levels article { 
     flex: 1;
     padding: 10px;
     text-align: center;
