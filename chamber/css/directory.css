@@ -122,7 +122,7 @@ hr {
     object-fit: cover;
 }
 
-#directory.list .list-item {
+#directory.list .list-item { 
     flex-direction: column;
     padding: 10px;
     background-color: #e0f7fa; 

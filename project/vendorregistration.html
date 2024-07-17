@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Wiselinda Zidor">
+    <title>Vendor Registration- FarmFresh Market Hub</title>
+    <meta property="og:title" content="FarmFresh Market Hub">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Central hub for local farmers' market featuring vendor information, product catalogs, and events.">
+    <meta property="og:image" content="https://wiselinda.github.io/wdd231/project/images/i.jpg">
+    <meta property="og:url" content="https://wiselinda.github.io/wdd231/project/index.html">
+    <link rel="stylesheet" href="styles/project.css">
+    <link rel="icon" href="images/i.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <img src="images/i.jpg" class="logo" alt="Logo">
+        <button class="hamburger" id="menu">&#9776;</button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="vendor.html">Vendors</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <section class="registration-form">
+            <h2>Join the Local Farmers' Market Hub</h2>
+            <button class="learn-more-button" id="modal-btn">Learn More about booth size</button>
+            <div class="booth-size">
+                <!-- booth size dynamically populated by JavaScript -->
+            </div>
+            <section class="vendor-form">
+                <form action="thankyou.html" method="get" id="vendorshipForm">
+                    <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" autocomplete="given-name" required>
+               
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" autocomplete="family-name" required>
+
+                <label for="orgTitle">Organizational Title:</label>
+                <input type="text" id="orgTitle" name="orgTitle" autocomplete="organization-title" pattern="[a-zA-Z\s\-]{7,}" title="Only alphabets, hyphens, and spaces allowed with a minimum of 7 characters">
+
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" autocomplete="email" required placeholder="e.g., example@example.com">
+
+                <label for="phone">Mobile Phone:</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+
+                <label for="orgName">Business/Organization Name:</label>
+                <input type="text" id="orgName" name="orgName" autocomplete="organization" required>
+
+                    <label for="message">Additional Message (optional)</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+
+                    <label for="boothSize">Booth Size:</label>
+                    <select id="boothSize" name="boothSize" required>
+                        <option value="" disabled selected>Select Booth Size</option>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+
+                    <input type="hidden" id="timestamp" name="timestamp">
+
+                    <button type="submit" class="button">Submit Registration</button>
+                </form>
+            </section>
+        </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Local Farmers' Market Hub. All rights reserved.</p>
+            <a href="attributions.html">Attributions</a>
+        </div>
+    </footer>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Booth Size Details</h3>
+            <div id="boothDetails">
+                <div id="smallBoothDetails" class="booth-detail">
+                    <h4>Small Booth</h4>
+                    <p>Compact booth size suitable for showcasing a limited selection of products. Includes basic setup assistance.</p>
+                </div>
+                <div id="mediumBoothDetails" class="booth-detail">
+                    <h4>Medium Booth</h4>
+                    <p>Moderate booth size offering flexibility in product display. Includes standard setup assistance and promotional support.</p>
+                </div>
+                <div id="largeBoothDetails" class="booth-detail">
+                    <h4>Large Booth</h4>
+                    <p>Spacious booth size ideal for showcasing a wide range of products. Includes premium setup assistance, marketing opportunities, and priority event access.</p>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <script src="srcipts/vendor-registration.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Farm Fresh Produce",
+        "address": "123 Market St, City, State",
+        "phoneNumber": "+1 (123) 456-7890",
+        "website": "http://www.farmfreshproduce.com",
+        "image": "farmfresh.jpg",
+        "vendorshipLevel": 1,
+        "description": "Offering a variety of fresh fruits and vegetables.",
+        "products": ["Apples", "Oranges", "Tomatoes"]
+    },
+    {
+        "name": "Organic Farms Co.",
+        "address": "456 Green Ave, City, State",
+        "phoneNumber": "+1 (234) 567-8901",
+        "website": "http://www.organicfarmsco.com",
+        "image": "organicfarms.jpg",
+        "vendorshipLevel": 2,
+        "description": "Certified organic produce and farm products.",
+        "products": ["Organic Greens", "Herbs", "Free-range Eggs"]
+    }
+    
+]

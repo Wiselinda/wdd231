@@ -45,13 +45,13 @@ document.addEventListener("DOMContentLoaded", function() {
             // Redirect to thankyou.html with form data
             window.location.href = `thankyou.html?${queryString}`;
         });
-    }
+    } 
 
     // Handle modal open and close
     const modal = document.getElementById('myModal');
     const learnMoreButton = document.getElementById('modal-btn');
     const closeButtons = document.querySelectorAll('.close');
-    const membershipDetails = document.querySelectorAll('.membership-detail');
+    const membershipDetails = document.querySelectorAll('.membership-detail'); 
 
     learnMoreButton.addEventListener('click', () => {
         modal.style.display = 'block';
@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    
     // Display membership details on click
     membershipDetails.forEach(detail => {
         detail.addEventListener('click', () => {

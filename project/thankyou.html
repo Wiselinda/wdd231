@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Wiselinda Zidor">
+    <title>Vendor Registration- FarmFresh Market Hub</title>
+    <meta property="og:title" content="FarmFresh Market Hub">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Central hub for local farmers' market featuring vendor information, product catalogs, and events.">
+    <meta property="og:image" content="https://wiselinda.github.io/wdd231/project/images/i.jpg">
+    <meta property="og:url" content="https://wiselinda.github.io/wdd231/project/index.html">
+    <link rel="stylesheet" href="styles/project.css">
+    <link rel="icon" href="images/i.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <img src="images/i.jpg" class="logo" alt="Logo">
+        <button class="hamburger" id="menu">&#9776;</button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="vendor.html">Vendors</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="thankyou-message">
+            <h2>Thank You for ypur submit!</h2>
+            <p>Submission details:</p>
+            <div class="form-details">
+                <p><strong>First Name:</strong> <span id="first-name">N/A</span></p>
+                <p><strong>Last Name:</strong> <span id="last-name">N/A</span></p>
+                <p><strong>Email:</strong> <span id="email">N/A</span></p>
+                <p><strong>Mobile Phone:</strong> <span id="phone">N/A</span></p>
+                <p><strong>Business/Organization Name:</strong> <span id="organization">N/A</span></p>
+                <p><strong>Message:</strong> <span id="message">N/A</span></p>
+                <p><strong>Timestamp:</strong> <span id="timestamp">N/A</span></p>
+            </div>
+            <p>We will review your application and contact you shortly.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Chamber of Commerce. All rights reserved.</p>
+        <p>Developed by Wiselinda Zidor for WDD 231. Last modified: <span id="last-modified"></span></p>
+    </footer>
+    <script src="scripts/vendor-registration.js" defer></script>
+</body>
+</html>

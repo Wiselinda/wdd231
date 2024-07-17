@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Wiselinda Zidor">
+    <title>FarmFresh Market Hub</title>
+    <meta property="og:title" content="FarmFresh Market Hub">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Central hub for local farmers' market featuring vendor information, product catalogs, and events.">
+    <meta property="og:image" content="https://wiselinda.github.io/wdd231/project/images/i.jpg">
+    <meta property="og:url" content="https://wiselinda.github.io/wdd231/project/index.html">
+    <link rel="stylesheet" href="styles/project.css">
+    <link rel="icon" href="images/i.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <img src="images/i.jpg" class="logo" alt="Logo">
+        <button class="hamburger" id="menu">&#9776;</button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="vendor.html">Vendors</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li> 
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <img src="images/hero.jpg" alt="Farmers Market" class="hero-image">
+            <div class="hero-text">
+                <h1>Welcome to FarmFresh Market Hub </h1>
+                <p>Support local farmers and enjoy the freshest produce from our community.</p>
+                <a href="join.html" class="cta">Join the Farmers' Market</a>
+            </div>
+        </section>
+        <section>
+            <h2>About Us</h2>
+            <p>Your one-stop hub for all information about our local farmers' market. Explore vendor offerings, seasonal produce, and upcoming events.</p>
+        </section>
+        <section class="weather">
+            <h5>Current Weather</h5>
+            <div class="Today-Weather">
+                <h5>Today Current Weather</h5>
+                <p id="town">Lagos</p>
+                <p id="description">Clouding over</p>
+                <img src="https://openweathermap.org/img/wn/02n@2x.png" alt="02n" id="weather-image" loading="lazy">
+                <p id="temperature">89.91°F</p>
+            </div>
+                <aside>
+                    <h5>3 Days Weather Forecast</h5>
+                    <div id="day-one">
+                        "Tomorrow"
+                        <p id="town-one">Haiti</p>
+                        <p id="description-one">overcast clouds</p>
+                        <img src="https://openweathermap.org/img/wn/04n@2x.png" alt="04n" id="weather-image-one" loading="lazy">
+                        <p id="temperature-one">87.37°F</p>
+                    </div>
+                    <div id="day-two">
+                        "Next- 2 days"
+                        <p id="town-two">Haiti</p>
+                        <p id="description-two">Party cloudy</p>
+                        <img src="https://openweathermap.org/img/wn/04n@2x.png" alt="04n" id="weather-image-two" loading="lazy">
+                        <p id="temperature-two">86.09°F</p>
+                    </div>
+                    <div id="day-three">
+                        "Next 3 Days"
+                        <p id="town-three">Haiti</p>
+                        <p id="description-three">Stormy</p>
+                        <img src="https://openweathermap.org/img/wn/10n@2x.png" alt="10n" id="weather-image-three" loading="lazy">
+                        <p id="temperature-three">80.74°F</p>
+                    </div>
+                </aside>
+            </section>
+        <section id="featured-vendors">
+            <h2>Featured Vendors</h2>
+            <div id="vendorList"></div>
+            <a href="vendor.html">View All Vendors</a>
+        </section>
+        <section id="upcoming-events">
+            <h2>Upcoming Events</h2>
+            <div id="eventList"></div>
+            <a href="events.html">View All Events</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Your Name. All rights reserved. | <a href="attributions.html">Attributions</a> | Last modified: <span id="lastModified"></span></p>
+    </footer>
+    <script src="srcipts/index.js" type="module"></script>
+</body>
+</html>

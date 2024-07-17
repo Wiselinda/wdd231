@@ -1,0 +1,13 @@
+[
+    {
+        "id": "event1",
+        "name": "Spring Market",
+        "date": "2024-04-21"
+    },
+    {
+        "id": "event2",
+        "name": "Harvest Festival",
+        "date": "2024-10-15"
+    }
+    
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "id": "product1",
+        "name": "Organic Carrots",
+        "category": "Vegetables",
+        "price": "$2.99 / lb",
+        "image": "organicfarms.jpg"
+    },
+    {
+        "id": "product2",
+        "name": "Free-range Eggs",
+        "category": "Dairy",
+        "price": "$3.50 / dozen",
+        "image": "organicfarms.jpg"
+    }
+   
+]
