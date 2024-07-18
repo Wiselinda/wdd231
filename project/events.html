@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Wiselinda Zidor">
-    <title>Events- FarmFresh Market Hub</title>
+    <title>Events - FarmFresh Market Hub</title>
     <meta property="og:title" content="FarmFresh Market Hub">
     <meta property="og:type" content="website">
     <meta property="og:description" content="Central hub for local farmers' market featuring vendor information, product catalogs, and events.">
@@ -28,8 +28,8 @@
         </nav> 
     </header>
     <main>
-            <h2>Upcoming Events</h2>
-            <div id="events-list" class="events-list">
+        <h2>Upcoming Events</h2>
+        <div id="events-list" class="events-list"></div>
     </main>
     <footer>
         <div class="footer-content">
@@ -47,7 +47,18 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal Structure -->
+    <div id="event-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="modal-close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <img id="modal-image" src="" alt="">
+            <p id="modal-date"></p>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
     <script src="scripts/events.js" defer></script>
 </body>
 </html>
-

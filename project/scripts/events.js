@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function displayEvents(events) {
         const eventsList = document.getElementById('events-list');
+        eventsList.innerHTML = ''; // Clear previous content
         events.forEach(event => {
             const eventItem = document.createElement('div');
             eventItem.classList.add('event');
@@ -31,13 +32,42 @@ document.addEventListener("DOMContentLoaded", function() {
                 <img src="images/${event.image}" alt="${event.name}">
                 <h3>${event.name}</h3>
                 <p>${event.date}</p>
-                <p>${event.description}</p>
                 <button onclick="openModal('${event.id}')">More Info</button>
             `;
             eventsList.appendChild(eventItem);
         });
     }
 
+    function openModal(eventId) {
+        fetch('https://wiselinda.github.io/wdd231/project/data/eventData.json')
+            .then(response => response.json())
+            .then(events => {
+                const event = events.find(e => e.id === eventId);
+                if (event) {
+                    document.getElementById('modal-title').textContent = event.name;
+                    document.getElementById('modal-image').src = `images/${event.image}`;
+                    document.getElementById('modal-image').alt = event.name;
+                    document.getElementById('modal-date').textContent = event.date;
+                    document.getElementById('modal-description').textContent = event.description;
+                    document.getElementById('event-modal').style.display = 'block';
+                }
+            })
+            .catch(error => console.error('Error fetching event details:', error));
+    }
+
+    function closeModal() {
+        document.getElementById('event-modal').style.display = 'none';
+    }
+
+    document.getElementById('modal-close').addEventListener('click', closeModal);
+    window.addEventListener('click', function(event) {
+        if (event.target == document.getElementById('event-modal')) {
+            closeModal();
+        }
+    });
+
     fetchEvents();
 });
 
+// Make openModal a global function so it can be accessed by the onclick attribute in HTML
+window.openModal = openModal;

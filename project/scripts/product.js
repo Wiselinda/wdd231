@@ -73,3 +73,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     fetchProducts();
 });
+
+// Make openModal a global function so it can be accessed by the onclick attribute in HTML
+window.openModal = openModal;

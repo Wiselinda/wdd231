@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Wiselinda Zidor">
-    <title>Products- FarmFresh Market Hub</title>
+    <title>Products - FarmFresh Market Hub</title>
     <meta property="og:title" content="FarmFresh Market Hub">
     <meta property="og:type" content="website">
     <meta property="og:description" content="Central hub for local farmers' market featuring vendor information, product catalogs, and events.">
@@ -20,7 +20,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="vendors.html">Vendors</a></li>
+                <li><a href="vendor.html">Vendor</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="events.html">Events</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -28,9 +28,9 @@
         </nav>
     </header>
     <main>  
-            <h1>Product Catalogs</h1>
-            <div id="product-catalog" class="product-catalog"></div>
-            <p>Discover the benefits of becoming a member and join our thriving community.</p>
+        <h1>Product Catalogs</h1>
+        <div id="product-catalog" class="product-catalog"></div>
+        <p>Discover the benefits of becoming a member and join our thriving community.</p>
     </main>
     <footer>
         <div class="footer-content">
@@ -48,17 +48,19 @@
             </div>
         </div>
     </footer>
-    <!-- Add this before the closing </body> tag -->
-<div id="product-modal" class="modal">
-    <div class="modal-content">
-        <span class="close" id="modal-close">&times;</span>
-        <h2 id="modal-title"></h2>
-        <img id="modal-image" src="" alt="">
-        <p id="modal-category"></p>
-        <p id="modal-price"></p>
-        <p id="modal-description"></p>
+
+    <!-- Modal Structure -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="modal-close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <img id="modal-image" src="" alt="">
+            <p id="modal-category"></p>
+            <p id="modal-price"></p>
+            <p id="modal-description"></p>
+        </div>
     </div>
-</div>
+
     <script src="scripts/product.js" defer></script>
 </body>
 </html>

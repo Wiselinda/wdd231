@@ -5,10 +5,9 @@ export function openModal(item) {
 
     modalContainer.classList.add('open');
     modalContent.innerHTML = `
-        <h2>${item.name}</h2>
-        <p>${item.description}</p>
-        <p>Location: ${item.location}</p>
-        <p>Category: ${item.category}</p>
+        <h2>${item.food}</h2>
+        <p>Quantity: ${item.quantity} ${item.measure}</p>
+        <p>Weight: ${item.weight} g</p>
         <button class="close-modal-btn">Close</button>
     `;
     modalOverlay.style.display = 'block';
