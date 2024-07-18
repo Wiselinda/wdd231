@@ -15,6 +15,9 @@ document.addEventListener("DOMContentLoaded", function() {
     async function fetchProducts() { 
         try {
             const response = await fetch('https://wiselinda.github.io/wdd231/project/data/productData.json');
+            if (!response.ok) {
+                throw new Error('Network response was not ok.');
+            }
             const products = await response.json();
             displayProducts(products);
         } catch (error) {
@@ -24,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function displayProducts(products) {
         const productCatalog = document.getElementById('product-catalog');
+        productCatalog.innerHTML = ''; // Clear previous content
         products.forEach(product => {
             const productItem = document.createElement('div');
             productItem.classList.add('product');
@@ -37,6 +41,35 @@ document.addEventListener("DOMContentLoaded", function() {
             productCatalog.appendChild(productItem);
         });
     }
+
+    function openModal(productId) {
+        fetch('https://wiselinda.github.io/wdd231/project/data/productData.json')
+            .then(response => response.json())
+            .then(products => {
+                const product = products.find(p => p.id === productId);
+                if (product) {
+                    document.getElementById('modal-title').textContent = product.name;
+                    document.getElementById('modal-image').src = `images/${product.image}`;
+                    document.getElementById('modal-image').alt = product.name;
+                    document.getElementById('modal-category').textContent = product.category;
+                    document.getElementById('modal-price').textContent = product.price;
+                    document.getElementById('modal-description').textContent = product.description;
+                    document.getElementById('product-modal').style.display = 'block';
+                }
+            })
+            .catch(error => console.error('Error fetching product details:', error));
+    }
+
+    function closeModal() {
+        document.getElementById('product-modal').style.display = 'none';
+    }
+
+    document.getElementById('modal-close').addEventListener('click', closeModal);
+    window.addEventListener('click', function(event) {
+        if (event.target == document.getElementById('product-modal')) {
+            closeModal();
+        }
+    });
 
     fetchProducts();
 });
