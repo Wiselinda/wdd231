@@ -9,8 +9,8 @@ body {
 }
 
 header {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #1B5E20;
+    color: #FFFFFF;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -45,7 +45,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #FFFFFF;
     text-decoration: none;
     padding: 5px 10px;
     transition: background-color 0.3s;
@@ -72,7 +72,7 @@ main {
 }
 
 h2 {
-    color: #4CAF50;
+    color: #2E7D32;
 }
 
 h3 {
@@ -113,17 +113,20 @@ h3 {
 
 /* Footer */
 footer {
-    background-color: #333333;
-    color: white;
+    background-color: #1B5E20;
+    color: #FFFFFF;
     text-align: center;
     padding: 10px 0;
     margin-top: 20px;
 }
 
 footer a {
-    color: white;
+    color: #FFFFFF;
     text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s; 
 }
+
 
 /*home page styles*/
 
@@ -168,10 +171,26 @@ footer a {
 }
 
 /* Featured Vendors and Upcoming Events sections */
-#featured-vendors, #upcoming-events {
+
+#featured-vendors {
     border: 1px solid #ddd;
     padding: 20px;
     margin: 20px 0;
+    background-image: url('images/vendor-1.jpg'); /* Replace with the actual path to your image */
+    background-size: cover;
+    background-position: center;
+    color: white; /* Adjust text color for better readability */
+}
+
+/* Upcoming Events section */
+#upcoming-events {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px 0;
+    background-image: url('images/event.jpg'); /* Replace with the actual path to your image */
+    background-size: cover;
+    background-position: center;
+    color: white; /* Adjust text color for better readability */
 }
 
 /* Vendor styles */
@@ -181,8 +200,8 @@ footer a {
 }
 
 .section h2 {
-    color: #007bff;
-    border-bottom: 2px solid #007bff;
+    color: #2E7D32;
+    border-bottom: 2px solid #2E7D32;
     padding-bottom: 10px;
 }
 
@@ -208,8 +227,8 @@ ul {
 
 .button {
     display: inline-block;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #1B5E20;
+    color: #FFFFFF;
     text-decoration: none;
     padding: 10px 20px;
     margin-top: 15px;
@@ -218,7 +237,7 @@ ul {
 }
 
 .button:hover {
-    background-color: #0056b3;
+    background-color: #4CAF50;
 }
 
 .gallery-item {
@@ -255,8 +274,8 @@ form input, form textarea {
 }
 
 form button {
-    background-color: #4CAF50;
-    color: #fff;
+    background-color: #1B5E20;
+    color: #FFFFFF;
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -268,7 +287,7 @@ form button:hover {
 
 /* CSS specific to vendor registration page */
 #registration-form {
-    background: #fff;
+    background: #ffffff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -292,7 +311,7 @@ textarea,
 select {
     width: 100%;
     padding: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
     border-radius: 4px;
     box-sizing: border-box;
 }
@@ -302,8 +321,8 @@ textarea {
 }
 
 button {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #1B5E20;
+    color: #FFFFFF;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
@@ -327,7 +346,7 @@ button:hover {
     flex: 1;
     padding: 10px;
     text-align: center;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
     border-radius: 5px;
     margin: 10px;
     transition: background-color 0.3s;
@@ -395,7 +414,7 @@ button:hover {
 }
 
 .product, .event {
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
     padding: 1rem;
     width: calc(33.333% - 2rem);
     box-sizing: border-box;
@@ -413,7 +432,7 @@ button:hover {
 button {
     padding: 0.5rem 1rem;
     background-color: #333;
-    color: #fff;
+    color: #ffffff;
     border: none;
     cursor: pointer;
 }
@@ -425,18 +444,50 @@ button:hover {
 /* Responsive navigation */
 @media (max-width: 768px) {
     nav ul {
-        display: flex;
+        display: none;
         flex-direction: column;
-        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul.show {
+        display: flex;
+        position: relative;
+        margin-top: 70px;
     }
 
     nav ul li {
-        margin: 5px 0;
+        margin: 10px 0;
     }
+
     .hamburger {
-        display: block;
+        display: flex;
+        margin-bottom: 10px;
     }
-    
+
+    .hero-text {
+        width: 90%;
+        padding: 0px;
+        font-size: 14px;
+    }
+
+    #day-one, #day-two, #day-three {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    #featured-vendors, #upcoming-events {
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 45%;
+    }
+
+     #featured-vendors, #upcoming-events img {
+            margin-right: 0;
+        margin-bottom: 10px;
+        max-width: 100%;
+        }
+
     .product, .event {
         width: calc(50% - 2rem);
     }

@@ -1,19 +1,19 @@
 [
     {
         "id": "p1",
-        "name": "Organic Apples",
+        "name": "Apple",
         "category": "Fruits",
         "price": "$2.00/lb",
         "description": "Fresh organic apples from local farms.",
-        "image": "organic-apples.jpg"
+        "image": "apple.jpg"
     },
     {
         "id": "p2",
-        "name": "Free-range Eggs",
+        "name": "Eggs",
         "category": "Dairy",
         "price": "$3.50/dozen",
         "description": "Free-range eggs from happy hens.",
-        "image": "free-range-eggs.jpg"
+        "image": "eggs.jpg"
     },
     {
         "id": "p3",

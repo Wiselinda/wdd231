@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Fetch and display product data
-    async function fetchProducts() {
+    async function fetchProducts() { 
         try {
             const response = await fetch('https://wiselinda.github.io/wdd231/project/data/productData.json');
             const products = await response.json();

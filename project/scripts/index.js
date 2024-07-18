@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const weatherImageThree = document.querySelector('#weather-image-three');
     const temperatureOne = document.querySelector('#temperature-one');
     const temperatureTwo = document.querySelector('#temperature-two');
-    const temperatureThree = document.querySelector('#temperature-three');
+    const temperatureThree = document.querySelector('#temperature-three'); 
 
     // Toggle menu visibility on hamburger click
     hamburger.addEventListener('click', () => {

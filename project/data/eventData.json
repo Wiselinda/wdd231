@@ -4,21 +4,20 @@
         "name": "Farmers' Market Kickoff",
         "date": "2024-08-01",
         "description": "Join us for the grand opening of this season's farmers' market.",
-        "image": "market-kickoff.jpg"
+        "image": "event.jpg"
     },
     {
         "id": "e2",
         "name": "Cooking Demonstration",
         "date": "2024-08-15",
         "description": "Watch local chefs prepare delicious meals using fresh market produce.",
-        "image": "cooking-demo.jpg"
+        "image": "Cooking Demonstration.jpg"
     },
     {
         "id": "e3",
         "name": "Harvest Festival",
         "date": "2024-09-10",
         "description": "Celebrate the harvest season with fun activities and delicious food.",
-        "image": "harvest-festival.jpg"
+        "image": "harvestfestival.jpg"
     }
-    
 ]

@@ -179,7 +179,7 @@ section {
     margin-bottom: 20px;
 }
 
-.spotlights {
+.spotlights { 
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
