@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
     import('./weather.js').then(module => {
         const fetchWeather = module.fetchWeather;
         fetchWeather();
-    });
+    }).catch(error => console.error('Error loading weather module:', error));
 
     // Fetch Vendor Data
     async function fetchVendors() {
@@ -122,4 +122,3 @@ document.addEventListener("DOMContentLoaded", function() {
     if (document.getElementById('productCatalog')) fetchProducts();
     if (document.getElementById('eventList')) fetchEvents();
 });
-

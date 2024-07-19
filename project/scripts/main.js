@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", async function() {
     }
 
     // Example of localStorage usage
-    const visited = localStorage.getItem('visited');
+    const visited = localStorage.getItem('visited'); 
     if (!visited) {
         localStorage.setItem('visited', 'true');
         console.log('Welcome to the Local Farmers\' Market Hub!');

@@ -11,7 +11,7 @@ export async function fetchNutritionDetails() {
             headers: {
                 'Content-Type': 'application/json',
                 'X-RapidAPI-Host': 'recipe-food-nutrition15.p.rapidapi.com',
-                'X-RapidAPI-Key': 'c2480d32d9msh651d3c23a0cb23ep1d267bjsn4bfd6cbe79a8'
+                'X-RapidAPI-Key': 'c2480d32d9msh651d3c23a0cb23ep1d267bjsn4bfd6cbe79a8' 
             },
             body: JSON.stringify(ingredientsData)
         });

@@ -13,7 +13,7 @@ export function openModal(item) {
     modalOverlay.style.display = 'block';
 
     // Event listener for closing modal
-    const closeModalBtn = document.querySelector('.close-modal-btn');
+    const closeModalBtn = document.querySelector('.close-modal-btn'); 
     closeModalBtn.addEventListener('click', closeModal);
     modalOverlay.addEventListener('click', closeModalOutside);
 }

@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     document.getElementById('modal-image').alt = event.name;
                     document.getElementById('modal-date').textContent = event.date;
                     document.getElementById('modal-description').textContent = event.description;
-                    document.getElementById('event-modal').style.display = 'block';
+                    document.getElementById('event-modal').style.display = 'block'; 
                 }
             })
             .catch(error => console.error('Error fetching event details:', error));
@@ -66,8 +66,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    // Make openModal a global function so it can be accessed by the onclick attribute in HTML
+    window.openModal = openModal;
+
     fetchEvents();
 });
-
-// Make openModal a global function so it can be accessed by the onclick attribute in HTML
-window.openModal = openModal;
