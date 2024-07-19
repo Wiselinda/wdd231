@@ -580,6 +580,7 @@ button:hover {
     }
 
     #day-one, #day-two, #day-three {
+        flex-direction: column;
         width: 50%;
         margin-bottom: 20px;
     }
@@ -603,6 +604,11 @@ button:hover {
 
 /* Mobile responsiveness */
 @media (max-width: 600px) {
+    .hero-text {
+        width: 90%;
+        padding: 0px;
+        font-size: 14px;
+    }
     .vendor-item, .event-item {
         flex-direction: column;
         text-align: center;
@@ -614,6 +620,7 @@ button:hover {
     #day-one, #day-two, #day-three {
         width: 50%;
         margin-bottom: 20px;
+        flex-direction: column;
     }
     .product, .event {
         width: calc(100% - 2rem);
